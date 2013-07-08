@@ -15,12 +15,13 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 
 public class DeflaterOutputStream extends FilterOutputStream {
+  super(out);
   protected final Deflater deflater;
   protected final byte[] buffer;
 
   public DeflaterOutputStream(OutputStream out, Deflater deflater, int bufferSize)
   {
-    super(out);
+    this.out = out;
     this.deflater = deflater;
     this.buffer = new byte[bufferSize];
   }
