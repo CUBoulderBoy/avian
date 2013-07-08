@@ -15,7 +15,6 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 
 public class DeflaterOutputStream extends FilterOutputStream {
-  super(out);
   protected final Deflater deflater;
   protected final byte[] buffer;
 
